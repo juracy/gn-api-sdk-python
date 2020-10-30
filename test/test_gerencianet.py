@@ -46,7 +46,7 @@ class TestGerencianet():
             fixed_route = endpoints.remove_placeholders(
                 Constants.ENDPOINTS['update_parcel']['route'], {'id': 1})
 
-        assert 'Missing required parameter parcel' in str(raised)
+        assert "MissingParametersError('parcel')" in str(raised)
         # out = capsys.readouterr()
 
     def test_query_string(self):
